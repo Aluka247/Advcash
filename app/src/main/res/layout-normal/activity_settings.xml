@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1C1F2F"
+    tools:context=".SettingsActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/setting_tool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0D0F1A">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <RelativeLayout
+                android:id="@+id/back_linear"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                android:padding="7dp">
+
+
+
+                <ImageButton
+                    android:id="@+id/back_btn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/back"
+                    app:tint="@color/white"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:textSize="20sp"
+                android:layout_marginStart="50dp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        android:layout_below="@id/setting_tool"
+        ads:adUnitId="ca-app-pub-1637479756161526/3873858603">
+    </com.google.android.gms.ads.AdView>
+
+
+    <LinearLayout
+        android:id="@+id/setting_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/adView2">
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/more_apps"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:cardMaxElevation="0dp"
+            android:elevation="0dp"
+            app:cardBackgroundColor="@color/transparent"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/moreApps_tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/gold"
+                    android:text="MORE APPS"/>
+
+                <TextView
+                    android:id="@+id/moreApps_tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Discover more apps from us."
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/moreApps_tv1"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="10dp"
+                    />
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/view_line_color">
+
+        </View>
+
+
+        <TextView
+            android:id="@+id/help_us"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/gold"
+            android:text="HELP US"/>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/rate_us"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:cardMaxElevation="0dp"
+            android:elevation="0dp"
+            app:strokeWidth="0dp"
+            app:cardBackgroundColor="@color/transparent"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_centerVertical="true">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        app:tint="@color/help_color"
+                        android:src="@drawable/star"
+                        android:layout_marginStart="20dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rate us"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:layout_marginStart="20dp"
+                        />
+
+                </LinearLayout>
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/share_app"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:cardMaxElevation="0dp"
+            app:strokeWidth="0dp"
+            android:elevation="0dp"
+            app:cardBackgroundColor="@color/transparent"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_centerVertical="true">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        app:tint="@color/help_color"
+                        android:src="@drawable/share"
+                        android:layout_marginStart="20dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Share app to invite friends"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:layout_marginStart="20dp"
+                        />
+
+                </LinearLayout>
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/view_line_color">
+
+        </View>
+
+
+        <TextView
+            android:id="@+id/extra_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/gold"
+            android:text="EXTRA"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/clear_cache"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:cardMaxElevation="0dp"
+            app:strokeWidth="0dp"
+            android:elevation="0dp"
+            app:cardBackgroundColor="@color/transparent"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_centerVertical="true">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        app:tint="@color/help_color"
+                        android:src="@drawable/clean"
+                        android:layout_marginStart="20dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Clear Cache"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:layout_marginStart="20dp"
+                        />
+
+                </LinearLayout>
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/app_version"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:cardMaxElevation="0dp"
+            app:strokeWidth="0dp"
+            android:elevation="0dp"
+            app:cardBackgroundColor="@color/transparent"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_centerVertical="true">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        app:tint="@color/help_color"
+                        android:src="@drawable/info"
+                        android:layout_marginStart="20dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="App version"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:layout_marginStart="20dp"
+                        />
+
+                </LinearLayout>
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/social_icon_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="30dp"
+        android:gravity="center">
+
+
+
+        <ImageView
+            android:id="@+id/whatsapp"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:src="@drawable/whatsapp"/>
+
+
+        <ImageView
+            android:id="@+id/youtube"
+            android:layout_width="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_height="50dp"
+            android:src="@drawable/youtube"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

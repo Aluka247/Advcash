@@ -74,7 +74,7 @@ public class MyApplication extends Application implements Application.ActivityLi
         AdRequest adRequest = new AdRequest.Builder().build();
         AppOpenAd.load(
                 this,
-                "ca-app-pub-1637479756161526/3820466831",
+                "ca-app-pub-4073294740208531/2049542987",
                 adRequest,
                 AppOpenAd.APP_OPEN_AD_ORIENTATION_PORTRAIT,
                 loadCallback);

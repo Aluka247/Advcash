@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        android:background="#0D0F1A">
+
+        <ImageView
+            android:id="@+id/advcash_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/adv_img112"/>
+
+
+        <TextView
+            android:id="@+id/advcash_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Advcash"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/white"/>
+
+
+        <ImageButton
+            android:id="@+id/setting_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/settings"
+            android:layout_gravity="end"
+            android:layout_marginEnd="10dp"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+
+        <ImageButton
+            android:id="@+id/refresh_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/refresh_icon"
+            android:layout_gravity="end"
+            android:layout_marginEnd="10dp"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/webView"
+        android:layout_above="@id/adView2"
+        android:layout_below="@+id/toolbar"/>
+
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        android:layout_alignParentBottom="true"
+        ads:adUnitId="ca-app-pub-1637479756161526/3873858603">
+    </com.google.android.gms.ads.AdView>
+
+
+
+</RelativeLayout>
